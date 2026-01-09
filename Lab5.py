@@ -24,4 +24,16 @@ def sum_of_natural_numbers(n):
 #  *****
 # *******
 def centered_star_pyramid(n):
-    return ""
+    result = ""
+
+    for i in range (n):
+        for j in range(n - i - 1):
+            result += " "
+
+        for k in range(2*i + 1):
+            result += "*"
+        result += "\n"
+
+    return result.rstrip()
+
+print(centered_star_pyramid(4))
